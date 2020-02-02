@@ -1,0 +1,166 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/carnevalee_freakshow-50.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/carnevalee_freakshow-30.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/WaitingRoom.gd" type="Script" id=3]
+
+[node name="WaitingRoom" type="Control"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 1080, 1920 )
+color = Color( 0.847059, 0.67451, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 180.0
+margin_right = 720.0
+margin_bottom = 1920.0
+rect_min_size = Vector2( 720, 1920 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 720, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 291.0
+margin_top = 287.0
+margin_right = 428.0
+margin_bottom = 344.0
+custom_fonts/font = ExtResource( 1 )
+text = "'s room:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="ColorRect" parent="VBoxContainer"]
+margin_top = 636.0
+margin_right = 720.0
+margin_bottom = 1276.0
+rect_min_size = Vector2( 720, 640 )
+color = Color( 0.635294, 0.490196, 0, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 110.0
+margin_right = -50.0
+margin_bottom = -110.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P1" type="ColorRect" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+visible = false
+margin_right = 620.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 130 )
+size_flags_horizontal = 5
+color = Color( 0.847059, 0.337255, 0.219608, 1 )
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/P1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -17.5
+margin_right = 20.0
+margin_bottom = 17.5
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_right = 620.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="P2" type="ColorRect" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+visible = false
+margin_top = 14.0
+margin_right = 620.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 130 )
+color = Color( 0.847059, 0.337255, 0.219608, 1 )
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/P2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+margin_top = 14.0
+margin_right = 620.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="P3" type="ColorRect" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+visible = false
+margin_top = 28.0
+margin_right = 620.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 130 )
+color = Color( 0.847059, 0.337255, 0.219608, 1 )
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/P3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -17.5
+margin_right = 20.0
+margin_bottom = 17.5
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 1280.0
+margin_right = 720.0
+margin_bottom = 1920.0
+rect_min_size = Vector2( 720, 640 )
+
+[node name="Button" type="Button" parent="VBoxContainer/VSplitContainer"]
+margin_left = 221.0
+margin_top = 288.0
+margin_right = 498.0
+margin_bottom = 351.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 1 )
+text = "START GAME"
